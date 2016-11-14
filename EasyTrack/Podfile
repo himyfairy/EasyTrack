@@ -1,0 +1,3 @@
+target "EasyTrack"do
+pod 'AMapLocation'
+end
