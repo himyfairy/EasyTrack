@@ -22,6 +22,8 @@
     
     [self.locationManager startUpdatingLocation];
     
+    NSLog(@"hahaha");
+    
 }
 
 #pragma mark - AMapLocationManagerDelegate
