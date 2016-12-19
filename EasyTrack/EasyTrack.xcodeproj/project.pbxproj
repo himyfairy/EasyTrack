@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AA6AF1D098A74932177F57A1 /* libPods-EasyTrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410EE89D70CD7C7F4F50160 /* libPods-EasyTrack.a */; };
+		B51DF88D1E0822C20070E10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51DF88C1E0822C20070E10B /* AppDelegate.m */; };
+		B51DF8931E0826AE0070E10B /* QLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51DF8911E0826AE0070E10B /* QLHomeViewController.m */; };
+		B51DF8941E0826AE0070E10B /* QLHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51DF8921E0826AE0070E10B /* QLHomeViewController.xib */; };
+		B51DF8971E0826DC0070E10B /* QLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51DF8961E0826DC0070E10B /* QLNavigationController.m */; };
 		B5B1B96C1DD9AC9C00258D88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1B96B1DD9AC9C00258D88 /* main.m */; };
-		B5B1B96F1DD9AC9C00258D88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1B96E1DD9AC9C00258D88 /* AppDelegate.m */; };
-		B5B1B9721DD9AC9C00258D88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1B9711DD9AC9C00258D88 /* ViewController.m */; };
-		B5B1B9751DD9AC9C00258D88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B1B9731DD9AC9C00258D88 /* Main.storyboard */; };
 		B5B1B9771DD9AC9C00258D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */; };
 		B5B1B97A1DD9AC9C00258D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B1B9781DD9AC9C00258D88 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,13 +20,16 @@
 /* Begin PBXFileReference section */
 		5410EE89D70CD7C7F4F50160 /* libPods-EasyTrack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTrack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2A8BD2AA667178BAC22E72 /* Pods-EasyTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrack.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTrack/Pods-EasyTrack.release.xcconfig"; sourceTree = "<group>"; };
+		B51DF88B1E0822C20070E10B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B51DF88C1E0822C20070E10B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B51DF88F1E08232A0070E10B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B51DF8901E0826AE0070E10B /* QLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLHomeViewController.h; sourceTree = "<group>"; };
+		B51DF8911E0826AE0070E10B /* QLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLHomeViewController.m; sourceTree = "<group>"; };
+		B51DF8921E0826AE0070E10B /* QLHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLHomeViewController.xib; sourceTree = "<group>"; };
+		B51DF8951E0826DC0070E10B /* QLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLNavigationController.h; sourceTree = "<group>"; };
+		B51DF8961E0826DC0070E10B /* QLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLNavigationController.m; sourceTree = "<group>"; };
 		B5B1B9671DD9AC9C00258D88 /* EasyTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B1B96B1DD9AC9C00258D88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B5B1B96D1DD9AC9C00258D88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B5B1B96E1DD9AC9C00258D88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B5B1B9701DD9AC9C00258D88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B5B1B9711DD9AC9C00258D88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B5B1B9741DD9AC9C00258D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B1B9791DD9AC9C00258D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5B1B97B1DD9AC9C00258D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +56,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B51DF8861E0822C20070E10B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B51DF8881E0822C20070E10B /* Model */,
+				B51DF8891E0822C20070E10B /* View */,
+				B51DF8871E0822C20070E10B /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B51DF8871E0822C20070E10B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B51DF8901E0826AE0070E10B /* QLHomeViewController.h */,
+				B51DF8911E0826AE0070E10B /* QLHomeViewController.m */,
+				B51DF8921E0826AE0070E10B /* QLHomeViewController.xib */,
+				B51DF8951E0826DC0070E10B /* QLNavigationController.h */,
+				B51DF8961E0826DC0070E10B /* QLNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B51DF8881E0822C20070E10B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B51DF8891E0822C20070E10B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B51DF88A1E0822C20070E10B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B51DF88B1E0822C20070E10B /* AppDelegate.h */,
+				B51DF88C1E0822C20070E10B /* AppDelegate.m */,
+				B51DF88F1E08232A0070E10B /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		B5B1B95E1DD9AC9C00258D88 = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +123,8 @@
 		B5B1B9691DD9AC9C00258D88 /* EasyTrack */ = {
 			isa = PBXGroup;
 			children = (
-				B5B1B96D1DD9AC9C00258D88 /* AppDelegate.h */,
-				B5B1B96E1DD9AC9C00258D88 /* AppDelegate.m */,
-				B5B1B9701DD9AC9C00258D88 /* ViewController.h */,
-				B5B1B9711DD9AC9C00258D88 /* ViewController.m */,
-				B5B1B9731DD9AC9C00258D88 /* Main.storyboard */,
-				B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */,
-				B5B1B9781DD9AC9C00258D88 /* LaunchScreen.storyboard */,
-				B5B1B97B1DD9AC9C00258D88 /* Info.plist */,
+				B51DF8861E0822C20070E10B /* Main */,
+				B51DF88A1E0822C20070E10B /* Other */,
 				B5B1B96A1DD9AC9C00258D88 /* Supporting Files */,
 			);
 			path = EasyTrack;
@@ -90,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				B5B1B96B1DD9AC9C00258D88 /* main.m */,
+				B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */,
+				B5B1B9781DD9AC9C00258D88 /* LaunchScreen.storyboard */,
+				B5B1B97B1DD9AC9C00258D88 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -165,9 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51DF8941E0826AE0070E10B /* QLHomeViewController.xib in Resources */,
 				B5B1B97A1DD9AC9C00258D88 /* LaunchScreen.storyboard in Resources */,
 				B5B1B9771DD9AC9C00258D88 /* Assets.xcassets in Resources */,
-				B5B1B9751DD9AC9C00258D88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,8 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5B1B9721DD9AC9C00258D88 /* ViewController.m in Sources */,
-				B5B1B96F1DD9AC9C00258D88 /* AppDelegate.m in Sources */,
+				B51DF8971E0826DC0070E10B /* QLNavigationController.m in Sources */,
+				B51DF88D1E0822C20070E10B /* AppDelegate.m in Sources */,
+				B51DF8931E0826AE0070E10B /* QLHomeViewController.m in Sources */,
 				B5B1B96C1DD9AC9C00258D88 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,14 +283,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B5B1B9731DD9AC9C00258D88 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B5B1B9741DD9AC9C00258D88 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B5B1B9781DD9AC9C00258D88 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +324,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = EasyTrack/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -329,6 +370,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = EasyTrack/Other/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

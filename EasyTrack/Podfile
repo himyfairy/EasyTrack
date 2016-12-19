@@ -1,3 +1,5 @@
 target "EasyTrack"do
 pod 'AMapLocation'
+pod 'AMap3DMap'
+pod 'AMapSearch'
 end
