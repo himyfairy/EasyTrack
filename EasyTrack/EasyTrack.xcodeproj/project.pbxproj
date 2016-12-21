@@ -15,6 +15,7 @@
 		B5B1B96C1DD9AC9C00258D88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1B96B1DD9AC9C00258D88 /* main.m */; };
 		B5B1B9771DD9AC9C00258D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */; };
 		B5B1B97A1DD9AC9C00258D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B1B9781DD9AC9C00258D88 /* LaunchScreen.storyboard */; };
+		B5F692C21E0918CB00A8A91E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F692C11E0918CB00A8A91E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B1B9791DD9AC9C00258D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5B1B97B1DD9AC9C00258D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5F692C11E0918CB00A8A91E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B5F692C71E0918E100A8A91E /* EasyTrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyTrack.entitlements; sourceTree = "<group>"; };
 		EAA5A29CEA121E245DEC2A99 /* Pods-EasyTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTrack/Pods-EasyTrack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F692C21E0918CB00A8A91E /* MapKit.framework in Frameworks */,
 				AA6AF1D098A74932177F57A1 /* libPods-EasyTrack.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +55,7 @@
 		143E1B143A3FE5DDBD7F6561 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5F692C11E0918CB00A8A91E /* MapKit.framework */,
 				5410EE89D70CD7C7F4F50160 /* libPods-EasyTrack.a */,
 			);
 			name = Frameworks;
@@ -123,6 +128,7 @@
 		B5B1B9691DD9AC9C00258D88 /* EasyTrack */ = {
 			isa = PBXGroup;
 			children = (
+				B5F692C71E0918E100A8A91E /* EasyTrack.entitlements */,
 				B51DF8861E0822C20070E10B /* Main */,
 				B51DF88A1E0822C20070E10B /* Other */,
 				B5B1B96A1DD9AC9C00258D88 /* Supporting Files */,
@@ -186,6 +192,20 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = KRH844752F;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

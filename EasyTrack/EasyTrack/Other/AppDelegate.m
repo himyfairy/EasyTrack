@@ -20,7 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //配置使用HTTPS
+    [[AMapServices sharedServices] setEnableHTTPS:YES];
+    
+    //配置apikey
     [AMapServices sharedServices].apiKey = AMapServiceKey;
+    
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, K_SCREEN_WIDTH, K_SCREEN_HEIGHT)];
     
     QLHomeViewController *homeVC = [[QLHomeViewController alloc] init];
@@ -31,6 +36,5 @@
     
     return YES;
 }
-
 
 @end
