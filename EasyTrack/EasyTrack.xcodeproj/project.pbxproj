@@ -15,6 +15,7 @@
 		B5B1B96C1DD9AC9C00258D88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1B96B1DD9AC9C00258D88 /* main.m */; };
 		B5B1B9771DD9AC9C00258D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */; };
 		B5B1B97A1DD9AC9C00258D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B1B9781DD9AC9C00258D88 /* LaunchScreen.storyboard */; };
+		B5E727111E0A56AC0055F748 /* UIView+SizeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E727101E0A56AC0055F748 /* UIView+SizeCategory.m */; };
 		B5F692C21E0918CB00A8A91E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F692C11E0918CB00A8A91E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B1B9791DD9AC9C00258D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5B1B97B1DD9AC9C00258D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E7270F1E0A56AC0055F748 /* UIView+SizeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizeCategory.h"; sourceTree = "<group>"; };
+		B5E727101E0A56AC0055F748 /* UIView+SizeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SizeCategory.m"; sourceTree = "<group>"; };
 		B5F692C11E0918CB00A8A91E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B5F692C71E0918E100A8A91E /* EasyTrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyTrack.entitlements; sourceTree = "<group>"; };
 		EAA5A29CEA121E245DEC2A99 /* Pods-EasyTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTrack/Pods-EasyTrack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				B51DF88B1E0822C20070E10B /* AppDelegate.h */,
 				B51DF88C1E0822C20070E10B /* AppDelegate.m */,
 				B51DF88F1E08232A0070E10B /* PrefixHeader.pch */,
+				B5E7270F1E0A56AC0055F748 /* UIView+SizeCategory.h */,
+				B5E727101E0A56AC0055F748 /* UIView+SizeCategory.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B51DF8971E0826DC0070E10B /* QLNavigationController.m in Sources */,
+				B5E727111E0A56AC0055F748 /* UIView+SizeCategory.m in Sources */,
 				B51DF88D1E0822C20070E10B /* AppDelegate.m in Sources */,
 				B51DF8931E0826AE0070E10B /* QLHomeViewController.m in Sources */,
 				B5B1B96C1DD9AC9C00258D88 /* main.m in Sources */,

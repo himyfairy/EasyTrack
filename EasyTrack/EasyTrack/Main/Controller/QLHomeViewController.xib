@@ -12,7 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QLHomeViewController">
             <connections>
                 <outlet property="mapModeBtn" destination="MxK-tu-vhU" id="kRg-CE-Sfk"/>
+                <outlet property="pauseBtn" destination="B14-zy-2hW" id="zrI-yx-wSY"/>
+                <outlet property="pauseBtnCenterConstraint" destination="hNX-mT-X8A" id="TmV-l4-OdG"/>
                 <outlet property="startBtn" destination="iYw-TU-Ajz" id="i8v-Di-wNk"/>
+                <outlet property="startBtnBottomConstraint" destination="Bup-h2-PTr" id="CQP-hK-WO5"/>
+                <outlet property="stopBtn" destination="RN1-rl-LM5" id="je1-t2-Xsg"/>
+                <outlet property="stopBtnCenterConstraint" destination="kSO-14-jH3" id="w41-Pg-a1n"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,35 +27,66 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxK-tu-vhU">
-                    <rect key="frame" x="315" y="607" width="45" height="45"/>
+                    <rect key="frame" x="330" y="130" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="XjP-rh-ni4"/>
-                        <constraint firstAttribute="width" constant="45" id="oL8-Fl-0Nr"/>
+                        <constraint firstAttribute="height" constant="40" id="XjP-rh-ni4"/>
+                        <constraint firstAttribute="width" constant="40" id="oL8-Fl-0Nr"/>
                     </constraints>
                     <state key="normal" image="layer"/>
                     <connections>
                         <action selector="changeMapMode:" destination="-1" eventType="touchUpInside" id="StR-3r-bEm"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYw-TU-Ajz">
-                    <rect key="frame" x="15" y="552" width="100" height="100"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B14-zy-2hW">
+                    <rect key="frame" x="148" y="572" width="80" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="XZE-TX-hH6"/>
-                        <constraint firstAttribute="width" constant="100" id="swZ-un-mAj"/>
+                        <constraint firstAttribute="height" constant="80" id="Lea-Qa-Mox"/>
+                        <constraint firstAttribute="width" constant="80" id="nhK-Dk-8Wc"/>
+                    </constraints>
+                    <state key="normal" image="pause_white"/>
+                    <connections>
+                        <action selector="pauseBtnClick:" destination="-1" eventType="touchUpInside" id="Rhl-JB-Q64"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN1-rl-LM5">
+                    <rect key="frame" x="148" y="572" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="Av5-dH-aBV"/>
+                        <constraint firstAttribute="width" constant="80" id="lxb-mJ-TfO"/>
+                    </constraints>
+                    <state key="normal" image="stop_white"/>
+                    <connections>
+                        <action selector="stopBtnClick:" destination="-1" eventType="touchUpInside" id="F9k-oh-kwN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYw-TU-Ajz">
+                    <rect key="frame" x="148" y="572" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="XZE-TX-hH6"/>
+                        <constraint firstAttribute="width" constant="80" id="swZ-un-mAj"/>
                     </constraints>
                     <state key="normal" image="play"/>
+                    <connections>
+                        <action selector="startBtnClick:" destination="-1" eventType="touchUpInside" id="hET-Ju-pEZ"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="iYw-TU-Ajz" secondAttribute="bottom" constant="15" id="Bup-h2-PTr"/>
-                <constraint firstAttribute="bottom" secondItem="MxK-tu-vhU" secondAttribute="bottom" constant="15" id="XHd-N3-Bce"/>
-                <constraint firstItem="iYw-TU-Ajz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="YSG-rL-gRV"/>
-                <constraint firstAttribute="trailing" secondItem="MxK-tu-vhU" secondAttribute="trailing" constant="15" id="zFw-Q1-vdz"/>
+                <constraint firstItem="iYw-TU-Ajz" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="-15" id="Bup-h2-PTr"/>
+                <constraint firstItem="B14-zy-2hW" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="-15" id="EfE-1v-mSC"/>
+                <constraint firstItem="iYw-TU-Ajz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ORC-sY-pvP"/>
+                <constraint firstItem="RN1-rl-LM5" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="-15" id="YC6-AR-m2t"/>
+                <constraint firstItem="B14-zy-2hW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hNX-mT-X8A"/>
+                <constraint firstItem="RN1-rl-LM5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kSO-14-jH3"/>
+                <constraint firstItem="MxK-tu-vhU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="uRm-HB-vpx"/>
+                <constraint firstAttribute="trailing" secondItem="MxK-tu-vhU" secondAttribute="trailing" constant="5" id="zFw-Q1-vdz"/>
             </constraints>
         </view>
     </objects>
     <resources>
-        <image name="layer" width="35" height="35"/>
-        <image name="play" width="128" height="128"/>
+        <image name="layer" width="40" height="37"/>
+        <image name="pause_white" width="80" height="85"/>
+        <image name="play" width="100" height="100"/>
+        <image name="stop_white" width="80" height="80"/>
     </resources>
 </document>
