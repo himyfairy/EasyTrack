@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA6AF1D098A74932177F57A1 /* libPods-EasyTrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410EE89D70CD7C7F4F50160 /* libPods-EasyTrack.a */; };
+		B50902051E0C1EE500C6BF40 /* QLShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50902041E0C1EE500C6BF40 /* QLShareView.m */; };
+		B50902071E0C1EEC00C6BF40 /* QLShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50902061E0C1EEC00C6BF40 /* QLShareView.xib */; };
 		B51AEF7E1E0BCBE500CAEDC1 /* QLResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51AEF7C1E0BCBE500CAEDC1 /* QLResultViewController.m */; };
 		B51AEF7F1E0BCBE500CAEDC1 /* QLResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51AEF7D1E0BCBE500CAEDC1 /* QLResultViewController.xib */; };
 		B51DF88D1E0822C20070E10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51DF88C1E0822C20070E10B /* AppDelegate.m */; };
@@ -24,6 +26,9 @@
 /* Begin PBXFileReference section */
 		5410EE89D70CD7C7F4F50160 /* libPods-EasyTrack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTrack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2A8BD2AA667178BAC22E72 /* Pods-EasyTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrack.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTrack/Pods-EasyTrack.release.xcconfig"; sourceTree = "<group>"; };
+		B50902031E0C1EE500C6BF40 /* QLShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLShareView.h; sourceTree = "<group>"; };
+		B50902041E0C1EE500C6BF40 /* QLShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLShareView.m; sourceTree = "<group>"; };
+		B50902061E0C1EEC00C6BF40 /* QLShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLShareView.xib; sourceTree = "<group>"; };
 		B51AEF7B1E0BCBE500CAEDC1 /* QLResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLResultViewController.h; sourceTree = "<group>"; };
 		B51AEF7C1E0BCBE500CAEDC1 /* QLResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLResultViewController.m; sourceTree = "<group>"; };
 		B51AEF7D1E0BCBE500CAEDC1 /* QLResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLResultViewController.xib; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 		B51DF8891E0822C20070E10B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B50902031E0C1EE500C6BF40 /* QLShareView.h */,
+				B50902041E0C1EE500C6BF40 /* QLShareView.m */,
+				B50902061E0C1EEC00C6BF40 /* QLShareView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 				B5B1B97A1DD9AC9C00258D88 /* LaunchScreen.storyboard in Resources */,
 				B51AEF7F1E0BCBE500CAEDC1 /* QLResultViewController.xib in Resources */,
 				B5B1B9771DD9AC9C00258D88 /* Assets.xcassets in Resources */,
+				B50902071E0C1EEC00C6BF40 /* QLShareView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +322,7 @@
 				B51DF8931E0826AE0070E10B /* QLHomeViewController.m in Sources */,
 				B51AEF7E1E0BCBE500CAEDC1 /* QLResultViewController.m in Sources */,
 				B5B1B96C1DD9AC9C00258D88 /* main.m in Sources */,
+				B50902051E0C1EE500C6BF40 /* QLShareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

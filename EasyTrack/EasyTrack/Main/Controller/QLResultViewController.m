@@ -7,24 +7,27 @@
 //
 
 #import "QLResultViewController.h"
-
-@interface QLResultViewController () <MAMapViewDelegate>
+#import "QLShareView.h"
+@interface QLResultViewController () <MAMapViewDelegate, QLShareViewDelegate>
 
 @end
 
 @implementation QLResultViewController
+#pragma mark - lazy
+- (NSMutableArray<CLLocation *> *)coordinateArray {
+    if (!_coordinateArray) {
+        _coordinateArray = [NSMutableArray array];
+    }
+    return _coordinateArray;
+}
 
 #pragma mark - lifeCircle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self setup];
-//
-//    [self drawTrack];
-    
-    self.mapview.frame = CGRectMake(0, 64, K_SCREEN_WIDTH, K_SCREEN_HEIGHT - 64);
-    self.mapview.showsUserLocation = NO;
-    [self.view insertSubview:self.mapview atIndex:0];
+    [self setup];
+
+    [self drawTrack];
 }
 
 #pragma mark - method
@@ -36,9 +39,12 @@
     self.mapview = [[MAMapView alloc] initWithFrame:CGRectMake(0, 64, K_SCREEN_WIDTH, K_SCREEN_HEIGHT - 64)];
     self.mapview.delegate = self;
     [[AMapServices sharedServices] setEnableHTTPS:YES];
-    self.mapview.showsUserLocation = NO;
-    [self.view insertSubview:self.mapview atIndex:0];
+    self.mapview.showsUserLocation = YES;
+    self.mapview.userTrackingMode = MAUserTrackingModeNone;
+    [self.view addSubview:self.mapview];
     
+    //rightBarButtonItem
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"share"] style:UIBarButtonItemStylePlain target:self action:@selector(shareItemClick)];
 }
 
 - (void)drawTrack {
@@ -57,5 +63,9 @@
     //在地图上添加折线对象
     [self.mapview addOverlay:mypolyline];
     
+}
+
+- (void)shareItemClick {
+    [QLShareView showWithDelegate:self];
 }
 @end

@@ -131,7 +131,7 @@
 - (IBAction)pauseBtnClick:(UIButton *)sender {
     
     //startBtn往上动画
-    self.startBtnBottomConstraint.constant = -15;
+    self.startBtnBottomConstraint.constant = -30;
     
     //pauseBtn往右动画
     self.pauseBtnCenterConstraint.constant = 0;
@@ -152,7 +152,7 @@
 - (IBAction)stopBtnClick:(UIButton *)sender {
     
     //startBtn往上动画
-    self.startBtnBottomConstraint.constant = -15;
+    self.startBtnBottomConstraint.constant = -30;
     
     //pauseBtn往右动画
     self.pauseBtnCenterConstraint.constant = 0;
@@ -164,36 +164,22 @@
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         if (finished) {
+            
             //停止记录轨迹
             [self.locationManager stopUpdatingLocation];
             
+            //push结果
             QLResultViewController *resultVC = [[QLResultViewController alloc] init];
-            resultVC.coordinateArray = self.coordinateArray;
-            resultVC.mapview = [self.mapview copy];
+            [resultVC.coordinateArray addObjectsFromArray:self.coordinateArray];
             [self.navigationController pushViewController:resultVC animated:YES];
             
             //清空当前控制器的坐标数组
             [self.coordinateArray removeAllObjects];
             [self.mapview reloadMap];
             
-//            __block UIImage *screenshotImage = nil;
-//            __block NSInteger resState = 0;
-//            CGRect rect = CGRectMake(0, 0, K_SCREEN_WIDTH, K_SCREEN_HEIGHT);
-//            [self.mapview takeSnapshotInRect:rect withCompletionBlock:^(UIImage *resultImage, NSInteger state) {
-//                screenshotImage = resultImage;
-//                resState = state; // state表示地图此时是否完整，0-不完整，1-完整
-//            }];
-//            
-//            UIImageWriteToSavedPhotosAlbum(screenshotImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-        
         }
     }];
-    
 }
-
-//- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-//    
-//}
 
 //记录轨迹
 - (void)recordTrack {
