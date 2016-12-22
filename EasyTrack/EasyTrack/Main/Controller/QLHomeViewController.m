@@ -10,6 +10,7 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
+#import "QLResultViewController.h"
 
 @interface QLHomeViewController () <MAMapViewDelegate, AMapLocationManagerDelegate>
 
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *stopBtnCenterConstraint;
 
 @property (strong, nonatomic) MAMapView *mapview;
+@property (nonatomic, strong) MAPolyline *mypolyline;
 @property (nonatomic, strong) AMapLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableArray<CLLocation *> *coordinateArray;
 @end
@@ -44,26 +46,6 @@
     [super viewDidLoad];
     
     [self setup];
-    
-//    //构造折线数据对象
-//    CLLocationCoordinate2D commonPolylineCoords[4];
-//    commonPolylineCoords[0].latitude = 39.832136;
-//    commonPolylineCoords[0].longitude = 116.34095;
-//    
-//    commonPolylineCoords[1].latitude = 39.832136;
-//    commonPolylineCoords[1].longitude = 116.42095;
-//    
-//    commonPolylineCoords[2].latitude = 39.902136;
-//    commonPolylineCoords[2].longitude = 116.42095;
-//    
-//    commonPolylineCoords[3].latitude = 39.902136;
-//    commonPolylineCoords[3].longitude = 116.44095;
-//    
-//    //构造折线对象
-//    MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:4];
-//    
-//    //在地图上添加折线对象
-//    [self.mapview addOverlay: commonPolyline];
     
 }
 
@@ -135,7 +117,7 @@
     //stopBtn往右动画
     self.stopBtnCenterConstraint.constant = self.stopBtn.width;
     
-    [UIView animateWithDuration:1.0 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         if (finished) {
@@ -157,47 +139,61 @@
     //stopBtn往左动画
     self.stopBtnCenterConstraint.constant = 0;
     
-    [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-        [self.locationManager stopUpdatingLocation];
+        if (finished) {
+            [self.locationManager stopUpdatingLocation];
+        }
     }];
 }
 
 //停止按钮点击
 - (IBAction)stopBtnClick:(UIButton *)sender {
     
-    //停止记录轨迹
-    [self.locationManager stopUpdatingLocation];
+    //startBtn往上动画
+    self.startBtnBottomConstraint.constant = -15;
     
-    [self.mapview reloadMap];
-    CLLocationCoordinate2D commonPolylineCoords[self.coordinateArray.count];
-    for (int i = 0; i<self.coordinateArray.count; i++) {
-        CLLocation *location = self.coordinateArray[i];
-        commonPolylineCoords[i].latitude =  location.coordinate.latitude;
-        commonPolylineCoords[i].longitude = location.coordinate.longitude;
-    }
+    //pauseBtn往右动画
+    self.pauseBtnCenterConstraint.constant = 0;
     
-//    //构造折线数据对象
-//    commonPolylineCoords[0].latitude = 39.832136;
-//    commonPolylineCoords[0].longitude = 116.34095;
-//    
-//    commonPolylineCoords[1].latitude = 39.832136;
-//    commonPolylineCoords[1].longitude = 116.42095;
-//    
-//    commonPolylineCoords[2].latitude = 39.902136;
-//    commonPolylineCoords[2].longitude = 116.42095;
-//    
-//    commonPolylineCoords[3].latitude = 39.902136;
-//    commonPolylineCoords[3].longitude = 116.44095;
+    //stopBtn往左动画
+    self.stopBtnCenterConstraint.constant = 0;
     
-    //构造折线对象
-    MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:self.coordinateArray.count];
-    
-    //在地图上添加折线对象
-    [self.mapview addOverlay: commonPolyline];
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            //停止记录轨迹
+            [self.locationManager stopUpdatingLocation];
+            
+            QLResultViewController *resultVC = [[QLResultViewController alloc] init];
+            resultVC.coordinateArray = self.coordinateArray;
+            resultVC.mapview = [self.mapview copy];
+            [self.navigationController pushViewController:resultVC animated:YES];
+            
+            //清空当前控制器的坐标数组
+            [self.coordinateArray removeAllObjects];
+            [self.mapview reloadMap];
+            
+//            __block UIImage *screenshotImage = nil;
+//            __block NSInteger resState = 0;
+//            CGRect rect = CGRectMake(0, 0, K_SCREEN_WIDTH, K_SCREEN_HEIGHT);
+//            [self.mapview takeSnapshotInRect:rect withCompletionBlock:^(UIImage *resultImage, NSInteger state) {
+//                screenshotImage = resultImage;
+//                resState = state; // state表示地图此时是否完整，0-不完整，1-完整
+//            }];
+//            
+//            UIImageWriteToSavedPhotosAlbum(screenshotImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        
+        }
+    }];
     
 }
+
+//- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+//    
+//}
 
 //记录轨迹
 - (void)recordTrack {
@@ -214,20 +210,16 @@
 }
 
 #pragma mark - MAMapViewDelegate
-- (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay
-{
-    if ([overlay isKindOfClass:[MAPolyline class]])
-    {
+- (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay {
+    if ([overlay isKindOfClass:[MAPolyline class]]) {
         MAPolylineRenderer *polylineRenderer = [[MAPolylineRenderer alloc] initWithPolyline:overlay];
         
-        polylineRenderer.lineWidth    = 8.f;
-        polylineRenderer.strokeColor  = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.6];
+        polylineRenderer.lineWidth    = 4.0f;
+        polylineRenderer.strokeColor  = [UIColor colorWithRed:63/255.0 green:140/255.0 blue:251/255.0 alpha:1.0];
         polylineRenderer.lineJoinType = kMALineJoinRound;
         polylineRenderer.lineCapType  = kMALineCapRound;
-        
         return polylineRenderer;
     }
-    
     return nil;
 }
 
@@ -236,5 +228,18 @@
     QLLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
     [self.coordinateArray addObject:location];
     
+    //构造折线数据对象
+    CLLocationCoordinate2D commonPolylineCoords[self.coordinateArray.count];
+    for (int i = 0; i<self.coordinateArray.count; i++) {
+        CLLocation *location = self.coordinateArray[i];
+        commonPolylineCoords[i].latitude =  location.coordinate.latitude;
+        commonPolylineCoords[i].longitude = location.coordinate.longitude;
+    }
+    
+    //构造折线对象
+    self.mypolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:self.coordinateArray.count];
+    
+    //在地图上添加折线对象
+    [self.mapview addOverlay:self.mypolyline];
 }
 @end

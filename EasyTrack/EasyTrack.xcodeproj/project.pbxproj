@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA6AF1D098A74932177F57A1 /* libPods-EasyTrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410EE89D70CD7C7F4F50160 /* libPods-EasyTrack.a */; };
+		B51AEF7E1E0BCBE500CAEDC1 /* QLResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51AEF7C1E0BCBE500CAEDC1 /* QLResultViewController.m */; };
+		B51AEF7F1E0BCBE500CAEDC1 /* QLResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51AEF7D1E0BCBE500CAEDC1 /* QLResultViewController.xib */; };
 		B51DF88D1E0822C20070E10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51DF88C1E0822C20070E10B /* AppDelegate.m */; };
 		B51DF8931E0826AE0070E10B /* QLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51DF8911E0826AE0070E10B /* QLHomeViewController.m */; };
 		B51DF8941E0826AE0070E10B /* QLHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51DF8921E0826AE0070E10B /* QLHomeViewController.xib */; };
@@ -22,6 +24,9 @@
 /* Begin PBXFileReference section */
 		5410EE89D70CD7C7F4F50160 /* libPods-EasyTrack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTrack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2A8BD2AA667178BAC22E72 /* Pods-EasyTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrack.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTrack/Pods-EasyTrack.release.xcconfig"; sourceTree = "<group>"; };
+		B51AEF7B1E0BCBE500CAEDC1 /* QLResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLResultViewController.h; sourceTree = "<group>"; };
+		B51AEF7C1E0BCBE500CAEDC1 /* QLResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLResultViewController.m; sourceTree = "<group>"; };
+		B51AEF7D1E0BCBE500CAEDC1 /* QLResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLResultViewController.xib; sourceTree = "<group>"; };
 		B51DF88B1E0822C20070E10B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B51DF88C1E0822C20070E10B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B51DF88F1E08232A0070E10B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 				B51DF8901E0826AE0070E10B /* QLHomeViewController.h */,
 				B51DF8911E0826AE0070E10B /* QLHomeViewController.m */,
 				B51DF8921E0826AE0070E10B /* QLHomeViewController.xib */,
+				B51AEF7B1E0BCBE500CAEDC1 /* QLResultViewController.h */,
+				B51AEF7C1E0BCBE500CAEDC1 /* QLResultViewController.m */,
+				B51AEF7D1E0BCBE500CAEDC1 /* QLResultViewController.xib */,
 				B51DF8951E0826DC0070E10B /* QLNavigationController.h */,
 				B51DF8961E0826DC0070E10B /* QLNavigationController.m */,
 			);
@@ -239,6 +247,7 @@
 			files = (
 				B51DF8941E0826AE0070E10B /* QLHomeViewController.xib in Resources */,
 				B5B1B97A1DD9AC9C00258D88 /* LaunchScreen.storyboard in Resources */,
+				B51AEF7F1E0BCBE500CAEDC1 /* QLResultViewController.xib in Resources */,
 				B5B1B9771DD9AC9C00258D88 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +311,7 @@
 				B5E727111E0A56AC0055F748 /* UIView+SizeCategory.m in Sources */,
 				B51DF88D1E0822C20070E10B /* AppDelegate.m in Sources */,
 				B51DF8931E0826AE0070E10B /* QLHomeViewController.m in Sources */,
+				B51AEF7E1E0BCBE500CAEDC1 /* QLResultViewController.m in Sources */,
 				B5B1B96C1DD9AC9C00258D88 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
