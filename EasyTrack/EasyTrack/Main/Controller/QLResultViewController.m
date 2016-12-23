@@ -23,6 +23,7 @@
 
 #pragma mark - lifeCircle
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     [self setup];

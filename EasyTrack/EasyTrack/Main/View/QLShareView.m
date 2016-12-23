@@ -33,6 +33,7 @@
     [self.maskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(maskViewTap:)]];
 }
 
+
 #pragma mark - method
 - (void)maskViewTap:(UITapGestureRecognizer *)tap {
     [self dismissSelf];
