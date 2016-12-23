@@ -21,7 +21,8 @@
     share.delegate = delegate;
     [[UIApplication sharedApplication].keyWindow addSubview:share];
 }
-
+//RGB(137, 217, 82)
+//RGB(239, 241, 242)
 - (void)awakeFromNib {
     [super awakeFromNib];
     
