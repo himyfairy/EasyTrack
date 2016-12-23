@@ -21,8 +21,7 @@
     share.delegate = delegate;
     [[UIApplication sharedApplication].keyWindow addSubview:share];
 }
-//RGB(137, 217, 82)
-//RGB(239, 241, 242)
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -49,4 +48,31 @@
         }
     }];
 }
+
+//取消
+- (IBAction)cancelBtnClick {
+    [self dismissSelf];
+}
+
+//保存至相册
+- (IBAction)saveToAlbum:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(shareViewDidClickSaveToAlbumButton:)]) {
+        [self.delegate shareViewDidClickSaveToAlbumButton:self];
+    }
+}
+
+//分享给微信好友
+- (IBAction)shareToWechatFriend:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(shareViewDidClickShareToWechatFriendButton:)]) {
+        [self.delegate shareViewDidClickShareToWechatFriendButton:self];
+    }
+}
+
+//分享到微信朋友圈
+- (IBAction)shareToWechatTimeline:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(shareViewDidClickShareToWechatTiemlineButton:)]) {
+        [self.delegate shareViewDidClickShareToWechatTiemlineButton:self];
+    }
+}
+
 @end
