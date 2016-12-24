@@ -11,9 +11,9 @@
 
 @protocol QLShareViewDelegate <NSObject>
 @required
-- (void)shareViewDidClickSaveToAlbum:(QLShareView *)shareView;
-- (void)shareViewDidClickWechatFriend:(QLShareView *)shareView;
-- (void)shareViewDidClickWechatTimeline:(QLShareView *)shareView;
+- (void)shareViewDidClickSaveToAlbumButton:(QLShareView *)shareView;
+- (void)shareViewDidClickShareToWechatFriendButton:(QLShareView *)shareView;
+- (void)shareViewDidClickShareToWechatTiemlineButton:(QLShareView *)shareView;
 @end
 
 @interface QLShareView : UIView

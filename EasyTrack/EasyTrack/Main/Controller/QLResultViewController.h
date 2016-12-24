@@ -14,4 +14,5 @@
 @interface QLResultViewController : UIViewController
 @property (strong, nonatomic) MAMapView *mapview;
 @property (nonatomic, strong) NSMutableArray<CLLocation *> *coordinateArray;
+@property(nonatomic, assign) CLLocationCoordinate2D centerCoordinate;
 @end

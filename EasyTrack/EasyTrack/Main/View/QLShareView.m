@@ -24,15 +24,15 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    self.functionViewBottomConstraint.constant = 0;
-    [UIView animateWithDuration:0.3 animations:^{
-        [self layoutIfNeeded];
-    }];
-    
     [self.maskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(maskViewTap:)]];
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.functionView.transform = CGAffineTransformMakeTranslation(0, -self.functionView.height);
+    }];
+}
 
 #pragma mark - method
 - (void)maskViewTap:(UITapGestureRecognizer *)tap {
@@ -40,13 +40,42 @@
 }
 
 - (void)dismissSelf {
-    self.functionViewBottomConstraint.constant = self.functionView.height;
     [UIView animateWithDuration:0.3 animations:^{
-        [self layoutIfNeeded];
+        self.functionView.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         if (finished) {
             [self removeFromSuperview];
         }
     }];
 }
+
+//取消
+- (IBAction)cancelBtnClick {
+    [self dismissSelf];
+}
+
+//保存至相册
+- (IBAction)saveToAlbum:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(shareViewDidClickSaveToAlbumButton:)]) {
+        [self.delegate shareViewDidClickSaveToAlbumButton:self];
+    }
+    [self dismissSelf];
+}
+
+//分享给微信好友
+- (IBAction)shareToWechatFriend:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(shareViewDidClickShareToWechatFriendButton:)]) {
+        [self.delegate shareViewDidClickShareToWechatFriendButton:self];
+    }
+    [self dismissSelf];
+}
+
+//分享到微信朋友圈
+- (IBAction)shareToWechatTimeline:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(shareViewDidClickShareToWechatTiemlineButton:)]) {
+        [self.delegate shareViewDidClickShareToWechatTiemlineButton:self];
+    }
+    [self dismissSelf];
+}
+
 @end

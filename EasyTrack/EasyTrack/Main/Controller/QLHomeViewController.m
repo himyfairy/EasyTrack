@@ -30,6 +30,7 @@
 @property (nonatomic, strong) MAPolyline *mypolyline;
 @property (nonatomic, strong) AMapLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableArray<CLLocation *> *coordinateArray;
+@property (nonatomic, strong) NSMutableArray<MAPolyline *> *overlayArray;
 @end
 
 @implementation QLHomeViewController
@@ -39,6 +40,13 @@
         _coordinateArray = [NSMutableArray array];
     }
     return _coordinateArray;
+}
+
+- (NSMutableArray<MAPolyline *> *)overlayArray {
+    if (!_overlayArray) {
+        _overlayArray = [NSMutableArray array];
+    }
+    return _overlayArray;
 }
 
 #pragma mark - lifeCircle
@@ -168,13 +176,18 @@
             //停止记录轨迹
             [self.locationManager stopUpdatingLocation];
             
+            QLLog(@"%f, %f", self.mapview.centerCoordinate.latitude, self.mapview.centerCoordinate.longitude);
+            
             //push结果
             QLResultViewController *resultVC = [[QLResultViewController alloc] init];
+            resultVC.centerCoordinate = self.mapview.centerCoordinate;
             [resultVC.coordinateArray addObjectsFromArray:self.coordinateArray];
             [self.navigationController pushViewController:resultVC animated:YES];
             
             //清空当前控制器的坐标数组
+            [self.mapview removeOverlays:self.overlayArray];
             [self.coordinateArray removeAllObjects];
+            [self.overlayArray removeAllObjects];
             [self.mapview reloadMap];
             
         }
@@ -224,8 +237,10 @@
     
     //构造折线对象
     self.mypolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:self.coordinateArray.count];
+    [self.overlayArray addObject:self.mypolyline];
     
     //在地图上添加折线对象
     [self.mapview addOverlay:self.mypolyline];
+    
 }
 @end
