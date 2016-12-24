@@ -30,6 +30,8 @@
     [self setup];
 
     [self drawTrack];
+    
+    QLLog(@"viewDidLoad---");
 }
 
 #pragma mark - method
