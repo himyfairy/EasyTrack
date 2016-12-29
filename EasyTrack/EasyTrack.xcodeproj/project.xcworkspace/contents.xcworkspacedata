@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:EasyTrack.xcodeproj">
+      location = "self:/Users/Neo/Desktop/EasyTrack/EasyTrack/EasyTrack.xcodeproj">
    </FileRef>
 </Workspace>
