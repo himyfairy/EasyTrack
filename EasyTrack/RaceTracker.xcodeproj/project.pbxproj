@@ -48,7 +48,7 @@
 		B51DF8921E0826AE0070E10B /* QLHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLHomeViewController.xib; sourceTree = "<group>"; };
 		B51DF8951E0826DC0070E10B /* QLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLNavigationController.h; sourceTree = "<group>"; };
 		B51DF8961E0826DC0070E10B /* QLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLNavigationController.m; sourceTree = "<group>"; };
-		B5B1B9671DD9AC9C00258D88 /* EasyTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5B1B9671DD9AC9C00258D88 /* RaceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B1B96B1DD9AC9C00258D88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5B1B9761DD9AC9C00258D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B1B9791DD9AC9C00258D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		B5B1B9681DD9AC9C00258D88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5B1B9671DD9AC9C00258D88 /* EasyTrack.app */,
+				B5B1B9671DD9AC9C00258D88 /* RaceTracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,9 +234,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5B1B9661DD9AC9C00258D88 /* EasyTrack */ = {
+		B5B1B9661DD9AC9C00258D88 /* RaceTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5B1B97E1DD9AC9C00258D88 /* Build configuration list for PBXNativeTarget "EasyTrack" */;
+			buildConfigurationList = B5B1B97E1DD9AC9C00258D88 /* Build configuration list for PBXNativeTarget "RaceTracker" */;
 			buildPhases = (
 				2DEEDD470D5DDB17347AC415 /* [CP] Check Pods Manifest.lock */,
 				B5B1B9631DD9AC9C00258D88 /* Sources */,
@@ -249,9 +249,9 @@
 			);
 			dependencies = (
 			);
-			name = EasyTrack;
+			name = RaceTracker;
 			productName = EasyTrack;
-			productReference = B5B1B9671DD9AC9C00258D88 /* EasyTrack.app */;
+			productReference = B5B1B9671DD9AC9C00258D88 /* RaceTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -284,7 +284,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B5B1B9621DD9AC9C00258D88 /* Build configuration list for PBXProject "EasyTrack" */;
+			buildConfigurationList = B5B1B9621DD9AC9C00258D88 /* Build configuration list for PBXProject "RaceTracker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -297,7 +297,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5B1B9661DD9AC9C00258D88 /* EasyTrack */,
+				B5B1B9661DD9AC9C00258D88 /* RaceTracker */,
 			);
 		};
 /* End PBXProject section */
@@ -537,7 +537,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5B1B9621DD9AC9C00258D88 /* Build configuration list for PBXProject "EasyTrack" */ = {
+		B5B1B9621DD9AC9C00258D88 /* Build configuration list for PBXProject "RaceTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5B1B97C1DD9AC9C00258D88 /* Debug */,
@@ -546,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5B1B97E1DD9AC9C00258D88 /* Build configuration list for PBXNativeTarget "EasyTrack" */ = {
+		B5B1B97E1DD9AC9C00258D88 /* Build configuration list for PBXNativeTarget "RaceTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5B1B97F1DD9AC9C00258D88 /* Debug */,
