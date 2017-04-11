@@ -39,9 +39,9 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>开启才可以记录轨迹哦</string>
+	<string>开启定位信息才可以记录您的轨迹</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>允许才可以保存截图哦</string>
+	<string>允许访问相册以保存截图</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
